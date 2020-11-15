@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAYANG - QUIZ VUEJS SANBERCODE</title>
+</head>
+<body>
+
+
+
+    <div id="app">
+        <input type="text" v-model="name_input">
+        
+        <button @click="add"> Add </button>
+        <!-- <button-AddOrUpdate></button-AddOrUpdate> -->
+        <ul>
+            <li v-for="(user, index) in users">
+                {{ user.name}} <button v-if="" @click="edit(index)">Edit </button> || <button @click="hapus(index)" onclick="return confirm('Anda yakin ?')">Delete</button>
+            </li>
+        </ul>
+    </div>
+
+    
+    <script src="assets/vendor/vue.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
