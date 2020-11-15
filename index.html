@@ -12,7 +12,10 @@
     <div id="app">
         <input type="text" v-model="name_input">
         
-        <button @click="add"> {{ add ? 'Add' : 'Update'}} </button>
+        <button v-if="add" @click="add"> Add </button>
+        <button v-else="add" @click="update(this.)"> Update</button>
+
+        <!-- <button v-if @click="add"> {{ add ? 'Add' : 'Update'}} </button> -->
         <!-- <button-AddOrUpdate></button-AddOrUpdate> -->
         <ul>
             <li v-for="(user, index) in users">
