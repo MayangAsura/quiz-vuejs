@@ -1,3 +1,24 @@
+// new Vue({
+//     el: '#app',
+//     data(){
+//         return{
+//             users: [
+//                 {name: 'Ani'},
+//                 {name: 'Budi'},
+//                 {name: 'Tono'},
+//             ],
+//             updateSubmit: false,
+//             form: {
+//                 'name' : ''
+//             },
+//             selectedUserId : ''
+//         }
+//     },
+//     methods : {
+//         add()
+//     }
+
+// })
 
 
 
@@ -26,8 +47,8 @@ var app = new Vue({
         hapus: function(index){
             this.users.splice(index, 1)
         },
-        update: function(index){
-            this.users[index].name = this.name_input
+        update: function(){
+            this.users[this.tmp_id].name = this.name_input
             this.name_input = ""
         }
     }

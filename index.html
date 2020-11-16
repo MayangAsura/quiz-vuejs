@@ -8,22 +8,19 @@
 <body>
 
 
-
     <div id="app">
         <input type="text" v-model="name_input">
         
-        <button v-if="add" @click="tambah"> Add </button>
-        <button v-else="add" @click="update(tmp_id)"> Update</button>
+        <button v-show="add" @click="tambah"> Add </button>
+        <button v-show="!add" @click="update"> Update</button>
 
-        <!-- <button v-if @click="add"> {{ add ? 'Add' : 'Update'}} </button> -->
-        <!-- <button-AddOrUpdate></button-AddOrUpdate> -->
+
         <ul>
             <li v-for="(user, index) in users">
-                {{ user.name}} <button v-if="" @click="edit(index)">Edit </button> || <button @click="hapus(index)" onclick="return confirm('Anda yakin ?')">Delete</button>
+                {{ user.name}} <button @click="edit(index)">Edit </button> || <button type="button" @click="hapus(index)" onclick="return confirm('Anda yakin ?')? true : false ">Delete</button>
             </li>
         </ul>
     </div>
-
     
     <script src="assets/vendor/vue.js"></script>
     <script src="assets/js/app.js"></script>
