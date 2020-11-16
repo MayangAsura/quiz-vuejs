@@ -49,6 +49,7 @@ var app = new Vue({
         },
         update: function(){
             this.users[this.tmp_id].name = this.name_input
+            this.tmp_id = ''
             this.name_input = ""
         }
     }
